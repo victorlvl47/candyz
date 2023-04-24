@@ -8,6 +8,8 @@ function love.load()
     enemy = Enemy()
     -- table of bullets
     listOfBullets = {}
+
+    background = love.graphics.newImage("background-drip-candy.png")
 end
 
 function love.update(dt)
@@ -29,6 +31,11 @@ function love.update(dt)
 end
 
 function love.draw()
+    love.graphics.push()
+    love.graphics.scale(0.6, 0.6)
+    love.graphics.draw(background, 0, 0)
+    love.graphics.pop()
+
     player:draw()
     enemy:draw()
 
