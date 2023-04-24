@@ -1,3 +1,6 @@
+-- window title
+love.window.setTitle( "Candyz" )
+
 function love.load()
     Object = require "classic"
     require "player"
