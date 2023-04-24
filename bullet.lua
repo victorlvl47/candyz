@@ -17,6 +17,7 @@ function Bullet:update(dt)
     --If the bullet is out of the screen
     if self.y > love.graphics.getHeight() then
         --Restart the game
+        music:stop()
         love.load()
     end
 end

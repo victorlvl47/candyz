@@ -13,6 +13,11 @@ function love.load()
     listOfBullets = {}
 
     background = love.graphics.newImage("background-drip-candy.png")
+
+    music = love.audio.newSource("music-loop2.wav", "stream")
+
+    music:setLooping(true)
+    music:play()
 end
 
 function love.update(dt)
